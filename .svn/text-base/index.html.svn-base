@@ -1,0 +1,35 @@
+<script src="core/js/gelsheet-init.js"></script>
+
+<style>
+#gelsheet-container {
+	width:900px;
+	height: 600px;
+	margin: 30px auto;
+	box-shadow: 0px 0px 2px 0px #CCC;
+}
+
+#body {
+	text-align: center ;
+}
+</style>
+
+<div id = "gelsheet-container">
+
+</div>
+
+
+
+<script>
+	Gelsheet.init ({
+		container: "gelsheet-container",
+		
+		api: {
+			'save': "localhost/gelsheet/server/save.php?book_id={BOOK_ID}",
+			'load': "localhost/gelsheet/server/load.php?book_id={BOOK_ID}"	,
+			'delete': "localhost/gelsheet/server/delete.php?book_id={BOOK_ID}"	,
+			'list': "localhost/gelsheet/server/liset.php"	
+			
+		}
+	});	
+
+</script>
